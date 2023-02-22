@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+:root {
+  --white:white;
+  --bg:rgb(28, 28, 28);
+  --text:rgb(95, 95, 95);
+  --text-hover:rgb(4, 4, 4);
+  --orange:rgb(231,64,41);
+  --nav:rgb(219, 219, 219);
+  --padding:7%;
+  --margin: 7%;;
+  --container-width-lg: 80%;
+  --container-width-md: 87%;
+  --container-width-sm: 95%;
+  --transition: all .4s ease-in-out;
+  --height-value:4rem;
+}
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+    background-image:radial-gradient(var(--text) .5rem, transparent .8rem ) ;
+    background-size: 1rem .5rem;
+    /* line-height: 1.6; */
+}
+
+/* ================General Styles================== */
+.container {
+  width: var(--container-width-lg);
+  height: fit-content;
+  margin:0 auto;
+}
+.container__top {
+  margin-top: 5rem;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: bold;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+}
+strong {
+  font-size: .8rem;
+}
+img {
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+}
+a {
+  font-size: .9rem;
+  color: var(--text);
+  font-weight: 400;
+}
+.btn {
+  background-color: var(--bg);
+  width: fit-content;
+  display: inline-block;
+  margin: 0 auto;
+  border: .05rem solid transparent;
+  transition: var(--transition);
+}
+.btn:hover {
+  background-color: transparent;
+  color: var(--white);
+  border-color: var(--white);
+}
+.btn.lg {
+  padding: .3rem 1rem;
+  font-size: 1.2rem;
+  border-radius: .7rem;
+}
+.btn.sm {
+  padding: .2rem .7rem;
+  font-size: .9rem;
+  font-size: .7rem;
+  border-radius: .4rem;
+}
+/* ========Media Queries============= */
+@media screen  and ( max-width:600px ){
+  .container {
+    width: var(--container-width-sm);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+}

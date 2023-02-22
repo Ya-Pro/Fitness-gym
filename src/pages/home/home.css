@@ -1,0 +1,257 @@
+/* the header section */
+.header__container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+    height: fit-content;
+    margin: 10rem auto;
+}
+.header__container__left {
+    display: grid;
+    gap: .4rem;
+}
+.header__container__left h3 {
+    color: var(--orange);
+}
+.header__container__left h1 {
+    color: var(--white);
+}
+.header__container__left a {
+    margin-top: 1rem;
+}
+.header__container__right:hover {
+    transition: var(--transition);
+    filter: saturate(3);
+}
+
+/* the programs section styles */
+.head__section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+.head__section span {
+    display: inline-block;
+    color: var(--crown);
+    padding: .3rem .5rem;
+    background-color: var(--bg);
+    border-radius: .5rem;
+    color: var(--orange);
+    font-size: 1.2rem;
+}
+.programs__wrapper {
+    display: grid;
+    margin: var(--margin) auto;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}
+.card {
+    background-color: var(--nav);
+    border-radius: 1rem;
+    padding: 1rem 1.1rem;
+    text-align: center;
+    border: .08rem solid transparent;
+    transition: var(--transition);
+}
+.card:hover {
+    cursor: default;
+    background: transparent;
+    border-color: var(--orange);
+}
+.card span {
+    font-size: 2rem;
+    color: var(--orange);
+}
+.card strong {
+   display: inline-block;
+   margin: 1rem 0;
+}
+.card a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+/* the values section */
+.values__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+    place-items: center;
+}
+.values__image {
+    width: 100%;
+    transition: var(--transition);
+}
+.values__image:hover {
+    filter:saturate(3);
+}
+.values__cards {
+    margin-top: var(--margin);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.values__cards .card {
+    padding: 1rem .5rem;
+    position: relative;
+}
+/* the question part styling */
+ .faq__container {
+    margin: 10% auto;
+    height: fit-content;
+ }
+.faq__cards {
+    margin-top: 5%;
+    display:grid ;
+    grid-template-columns: repeat(2,1fr);
+    gap: .5rem;
+    align-items: flex-start;
+}
+.animate {
+    transition: all .5s ease-in-out;
+    transform: scale(1.05);
+}
+
+.faq__card {
+    background-color: var(--nav);
+    cursor: pointer;
+    padding: 1rem ;
+    border-radius: 1rem;
+} 
+.faq__head {
+    margin-top: 10rem;
+}
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq__card button {
+    background-color: transparent;
+    font-size: 1.1rem;
+}
+.faq__card .answer {
+    text-align: left;
+    margin-top: 1rem;
+}
+/* the testimonials styles */
+.testimonials {
+    padding: var(--padding) 0;
+    width: 60%;
+    margin-inline: auto;
+}
+.testimonial__head {
+    justify-content: center;
+}
+.testimonial__card {
+    margin-top: 5rem;
+    text-align: left;
+    position: relative;
+    height: max-content;
+}
+.testimonial__avatar {
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem auto;
+}
+.testimonial__quote {
+    padding: 1rem 0;
+    font-style: italic;
+}
+.testimonial__btns {
+    width: fit-content;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.testimonial__btn {
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: var(--nav);
+    cursor: pointer;
+    overflow: hidden;
+}
+/* the footer styles */
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: var(--nav);
+    gap: 1rem;
+    padding:2% 10%;
+}
+.footer__container > div > ul {
+    display: flex;
+    flex-direction: column;
+}
+.footer__socials {
+    display: flex;
+    gap: 0 1rem;
+}
+.footer__socials a {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: var(--text-hover);
+}
+ .nav__logo {
+    display: flex;
+    align-items: flex-start;
+    font-size: 2rem;
+    color: var(--text-variant);
+}
+.footer__container > div:nth-child(n+2):nth-child(-n+4) {
+    padding-top: .5rem;
+}
+.footer__container > div:nth-child(n+2):nth-child(-n+4)  a  {
+    display: inline-block;
+    margin: .3rem 0;
+}
+.footer__container  h4 {
+    color: var(--orange);
+}
+
+
+/* =============(media queries)================== */
+@media screen and (max-width:1024px) {
+  .header__container {
+    grid-template-columns: 1fr;
+    margin-top: 5rem;
+  }
+  img {
+    width: 70%;
+    margin: var(--margin) auto;
+  }
+h2 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1rem;
+}
+}
+@media screen and (max-width:600px) {
+    html {
+        font-size: 16px;
+    }
+    h5 {
+        font-size: .8rem;
+    }
+  .header__container, .programs__wrapper, .values__container ,.faq__cards{
+    grid-template-columns: 1fr;
+    margin: 5rem auto;
+  }
+  .faq__container {
+    margin: var(--margin) auto;
+  }
+  .footer__container {
+        grid-template-columns: 1fr;
+  }
+  .testimonials {
+    width: 98%;
+  }
+
+}

@@ -1,0 +1,35 @@
+.about__container {
+    margin: 5rem 0;
+}
+.head__container {
+    padding:2rem;
+}
+.head__content {
+    margin-top: 2rem;
+    width: 90%;
+    position: relative;
+}
+.head__image {
+    height: 20rem;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.head__image:hover {
+    filter: saturate(3);
+    cursor: pointer;
+    transform: translateY(-1rem);
+}
+.head__image:first-child:hover {
+        background:url(../../assets/fireef.png) no-repeat;
+background-size: contain;
+background-position: center;
+}
+
+.content h4 {
+    color: var(--orange);
+}
+.content p {
+    font-size: 1.2rem;
+    color: var(--white);
+    margin: 1rem 0;
+}

@@ -1,0 +1,132 @@
+nav {
+    height: var(--height-value);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--nav);
+    box-shadow: 0 .1rem .1rem var(--nav);
+    z-index: 99;
+    display: gird;
+    place-items: center;
+    transition: var(--transition);
+}
+.active {
+height: 5rem;
+}
+.active .active__link::before {
+   bottom: -2.4rem;
+}
+.nav__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+.nav__logo  {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.nav__logo span {
+    color: var(--orange);
+    font-size: 1.5rem;
+
+}
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+/* note that this icon will be displayed only on small and meduim screens */
+.nav__toggle {
+    display: none;
+}
+.active__link {
+    position: relative;
+    color: var(--text-hover);
+    transition: var(--transition);
+}
+.active__link::before {
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(-45deg);
+    background-color: var(--nav);
+    left: calc(50% - .5rem);
+    bottom:   -1.9rem;
+    transition: var(--transition);
+}
+/* ===Media queries of (medium devices) ======== */
+@media screen and (max-width:1024px) {
+    .nav__toggle {
+        display: inline-block;
+        background-color: transparent;
+        font-size: 1.2rem;
+        color: var(--text);
+        cursor: pointer;
+    }
+    .active__link, .active__link::before {
+        display:none ;
+    }
+    .nav__links {
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        right: 0;
+        gap: 0;
+        perspective: 20rem;
+    }
+    .nav__links li {
+        width: 100%;
+        height:100% ;
+        background-color: var(--nav);
+        box-shadow:inset 0 -.1rem .05rem rgb(198, 198, 198);
+        animation: nav .6s ease forwards ;
+        transform: rotateX(90deg);
+        transform-origin: top;
+        opacity: 0;
+    }
+    .nav__links li:nth-child(2) {
+        animation-delay: .2;
+    }
+    .nav__links li:nth-child(3) {
+        animation-delay: .4s;
+    }
+    .nav__links li:nth-child(4){
+        animation-delay: .6s;
+    }
+    .nav__links li:nth-child(5) {
+        animation-delay: .8s
+    }
+    .nav__links li:nth-child(6) {
+        animation-delay: 1s;
+    }
+    .nav__links li:nth-child(7){
+        animation-delay: 1.2s;
+    }
+    @keyframes nav {
+to {
+    transform: rotateX(0);
+    opacity: 1;
+}       
+    }
+    .nav__links li a {
+        padding: .5rem 3rem ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .show {
+        display: flex;
+    }
+    .hide {
+        display: none;
+    }
+}
+/* ===Media queries of (small devices) ======== */
+
+
+

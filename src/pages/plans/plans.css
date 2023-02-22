@@ -1,0 +1,70 @@
+.plans__container {
+    margin: 5rem auto;
+}
+.plans__cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    padding-top: 3rem;
+}
+.plans__price {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--nav);
+    font-weight: bolder;
+    animation: move 1s ease-in infinite alternate-reverse;
+}
+
+@keyframes move {
+    to {
+        transform: translateY(-1rem);
+    }
+}
+.plan__card {
+    border:.1rem solid var(--white);
+    box-shadow: 0 0 .5rem .1rem var(--white);
+    border-radius: 3rem;
+}
+.plan__card:nth-child(1) h3 {
+    border-bottom: .1rem solid rgb(0, 255, 183);
+}
+.plan__card:nth-child(2) h3 {
+    border-bottom: .1rem solid rgb(17, 0, 255);
+}
+.plan__card:nth-child(3) h3 {
+    border-bottom: .1rem solid rgb(51, 0, 65);
+}
+.plan__card:nth-child(1) a {
+    background-color: rgb(0, 255, 183);
+}
+.plan__card:nth-child(2) a {
+    background-color: rgb(17, 0, 255);
+}
+.plan__card:nth-child(3) a {
+    background-color: rgb(51, 0, 65);
+}
+.plan__card:hover {
+    background-color: var(--nav);
+    border-color: transparent;
+}
+.plan__card p {
+    padding: .5rem 0;
+}
+.plan__card .content {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+.plan__card .content small {
+    display: flex;
+    column-gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+.check {
+    color: green;
+}
+.cross {
+    color: red;
+}
