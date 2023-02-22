@@ -1,0 +1,12 @@
+export { default as logo } from "../assets/logo.ico";
+export { default as one } from "../assets/one.png";
+export { default as two } from "../assets/two.png";
+export { default as three } from "../assets/three.png";
+export { default as four } from "../assets/four.png";
+export { default as five } from "../assets/five.png";
+export { default as six } from "../assets/six.png";
+export { default as seven } from "../assets/seven.png";
+export { default as eight } from "../assets/eight.png";
+export { default as nine } from "../assets/nine.png";
+export { default as ten } from "../assets/ten.png";
+export { default as eleven } from "../assets/eleven.png";
